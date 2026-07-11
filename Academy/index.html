@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unmanned Systems Mastery Program</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #0284c7;
+            --accent: #0f766e;
+            --bg-light: #f8fafc;
+            --text-main: #334155;
+            --border: #e2e8f0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .lead-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            background-color: var(--bg-light);
+            padding: 1rem 1.5rem;
+            border-left: 4px solid var(--secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Grid Framework */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .card ul {
+            list-style-type: none;
+            margin-top: 1rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: "•";
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Tables styling */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+
+        .highlight-row {
+            font-weight: bold;
+            background-color: #f0fdf4 !important;
+        }
+
+        .metric-badge {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 3rem 2rem;
+            font-size: 0.95rem;
+            border-top: 1px solid #334155;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Unmanned Systems Mastery Program</h1>
+        <p>A Comprehensive Course Proposal for UAV, USV, and AUV Systems</p>
+        <p style="margin-top: 1rem; font-size: 1.1rem; color: #38bdf8;">Empowering the Next Generation of Autonomous Engineers</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Future of Autonomy -->
+        <section>
+            <h2>The Future of Autonomy</h2>
+            <p class="lead-text">
+                "Autonomous systems across Air, Surface, and Sub-surface domains are revolutionizing global industry, from logistics to environmental conservation."
+            </p>
+        </section>
+
+        <!-- Multi-Domain System Overview -->
+        <section>
+            <h2>Multi-Domain System Overview</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>UAV Systems (Aerial)</h3>
+                    <p>Platforms focusing on high-speed surveillance, logistics, and precision agriculture.</p>
+                    <span class="metric-badge">Focus: Aerodynamics & FAA/DGCA Compliance</span>
+                </div>
+                <div class="card">
+                    <h3>USV Systems (Surface)</h3>
+                    <p>Surface vessels designed for hydrographic surveying, maritime security, and port automation.</p>
+                    <span class="metric-badge">Focus: Wave Dynamics & Persistent Sensing</span>
+                </div>
+                <div class="card">
+                    <h3>AUV Systems (Sub-Surface)</h3>
+                    <p>Sub-surface exploration networks built for deep-sea mining and critical pipeline inspection.</p>
+                    <span class="metric-badge">Focus: Acoustic Comms & Extreme Pressure</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Deep Dives -->
+        <section>
+            <h2>Domain Engineering & Operations</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>UAV Flight Technology</h3>
+                    <p>Deep dive into Guidance, Navigation, and Control (GNC) systems for quadcopters and fixed-wing crafts.</p>
+                    <ul>
+                        <li>Precision Sensor Fusion (IMU, GPS, LiDAR)</li>
+                        <li>Swarm Intelligence & Multi-Agent Coordination</li>
+                        <li>Real-time Computer Vision for Obstacle Avoidance</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Maritime Engineering</h3>
+                    <p>Overcoming the physics barriers of harsh aquatic environments through adaptive software architectures.</p>
+                    <ul>
+                        <li>Acoustic Comms for sub-surface data links</li>
+                        <li>Inertial Navigation & SLAM in GPS-denied zones</li>
+                        <li>High-bandwidth Edge Computing for Sonar data</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4-Phase Curriculum -->
+        <section>
+            <h2>Course Structure & Learning Path</h2>
+            <p class="lead-text">Bridging the Gap Between Engineering Theory and Industrial Deployment.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Phase I: Foundations</h3>
+                    <p>Theoretical modeling of vehicle dynamics using MATLAB/Simulink and ROS-based virtual environments.</p>
+                </div>
+                <div class="card">
+                    <h3>Phase II: Hardware</h3>
+                    <p>Hands-on assembly, circuit calibration, and sensor integration using Pixhawk and Raspberry Pi controllers.</p>
+                </div>
+                <div class="card">
+                    <h3>Phase III: Control</h3>
+                    <p>Developing robust autonomous waypoint navigation, SLAM algorithms, and fault-tolerant structures.</p>
+                </div>
+                <div class="card">
+                    <h3>Phase IV: Capstone</h3>
+                    <p>Real-world industrial project deployments (e.g., search & rescue, ocean monitoring) with industry experts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Laboratory Infrastructure -->
+        <section>
+            <h2>Required Laboratory Infrastructure</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Domain Core</th>
+                            <th>Hardware Equipment</th>
+                            <th>Software & Testing Environments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Aerial (UAV)</strong></td>
+                            <td>Quadcopter DIY Kits, LiPo Charging Safes, FPV Systems</td>
+                            <td>ROS, ArduPilot, Gazebo Simulator</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Surface (USV)</strong></td>
+                            <td>Autonomous Boat Kits, LoRa Telemetry, AIS Receivers</td>
+                            <td>Mission Planner, QGroundControl</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sub-Surface (AUV)</strong></td>
+                            <td>BlueROV2 Platforms, Acoustic Modems, Side Scan Sonar</td>
+                            <td>Water Testing Tank, Acoustic Simulators</td>
+                        </tr>
+                        <tr>
+                            <td><strong>General Lab</strong></td>
+                            <td>3D Printers, CNC Mill, i7 Workstations (32GB RAM)</td>
+                            <td>MATLAB/Simulink, CAD Design Suite</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Strategic Value & Financial Model -->
+        <section>
+            <h2>Financial Model & Institutional Allocation</h2>
+            <p class="lead-text">Designed for a sustainable 12–18 month ROI timeline via targeted research funding and certification streams.</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Budget Category</th>
+                            <th>Responsibility</th>
+                            <th>Allocation Details</th>
+                            <th>Amount (INR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Setup CAPEX</strong></td>
+                            <td>University</td>
+                            <td>Lab Infrastructure, Networks, & Core Servers</td>
+                            <td class="highlight-row">₹1,26,00,000 (1.26 Cr)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hardware Kits</strong></td>
+                            <td>Our Firm</td>
+                            <td>Proprietary Loaner Fleet & Autonomous Drone Kits</td>
+                            <td class="highlight-row">₹71,40,000 (71.4 L)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Annual OPEX</strong></td>
+                            <td>Shared</td>
+                            <td>Ongoing Field Maintenance & System Upgrades</td>
+                            <td class="highlight-row">₹17,64,000 (17.64 L)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Licensing & Training</strong></td>
+                            <td>Institutional</td>
+                            <td>Professional Certifications & Curriculum Setup</td>
+                            <td class="highlight-row">₹10,08,000 (10.08 L)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 1rem;">🚀 <strong>Target Capacity:</strong> 40 students per batch across 3 specialized engineering tracks yielding a projected <strong>92% Industry Placement Rate</strong>.</p>
+        </section>
+
+        <!-- Partnership Framework -->
+        <section>
+            <h2>The Partnership Framework</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>The University</h3>
+                    <p>Provision of secure 1000+ sq ft dedicated lab space, electrical utilities, high-speed network channels, and specialized faculty leads for administrative oversight.</p>
+                </div>
+                <div class="card">
+                    <h3>Our Firm</h3>
+                    <p>Delivery of proprietary curriculum modules, continuous deployment of our hardware loaner fleet, full on-site technical engineers, and direct corporate placement pipelines.</p>
+                </div>
+                <div class="card">
+                    <h3>Shared Success</h3>
+                    <p>Collaborative intellectual property & patent filings, co-branded student certification paths, and high-visibility annual robotics showcases to accelerate institutional branding.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p><strong>Questions & Answers</strong></p>
+        <p style="margin: 0.5rem 0 1.5rem 0;">Thank you for your consideration.</p>
+        <p>Contact: <a href="mailto:robotics.partnership@firm.com">robotics.partnership@firm.com</a> | Visit: <a href="http://www.unmannedmastery.edu" target="_blank">www.unmannedmastery.edu</a></p>
+    </footer>
+
+</body>
+</html>
